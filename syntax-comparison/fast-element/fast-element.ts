@@ -1,9 +1,9 @@
 import { html, css, customElement, observable, FASTElement } from '@microsoft/fast-element';
 
 const template = html<MyCounter>`
-  <button @click="${(x) => x.count--}">-</button>
+  <button @click="${(x) => x.changeCount(x.count - 1)}">-</button>
   <span>${(x) => x.count}</span>
-  <button @click="${(x) => x.count++}">+</button>
+  <button @click="${(x) => x.changeCount(x.count + 1)}">+</button>
 `;
 
 const styles = css`
@@ -34,4 +34,8 @@ const styles = css`
 })
 export class MyCounter extends FASTElement {
   @observable count: number = 0;
+
+  changeCount(newCount: number) {
+    this.count = newCount;
+  }
 }
