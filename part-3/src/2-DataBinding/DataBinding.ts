@@ -2,13 +2,12 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('data-binding')
+@customElement('x-databinding')
 export class DataBindingParent extends LitElement {
   @property({ type: String }) message = 'Data binding test!';
 
   static styles = css`
     :host {
-      font-size: calc(10px + 2vmin);
       border: 2px solid red;
     }
   `;
@@ -34,10 +33,8 @@ export class DataBindingChild extends LitElement {
 
   render() {
     return html`
-      <main>
-        <h3>This is the child</h3>
-        <p>This is the message via data binding: "${this.message}"</p>
-      </main>
+      <h3>This is the child</h3>
+      <p>This is the message via data binding: "${this.message}"</p>
     `;
   }
 }

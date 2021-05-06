@@ -6,6 +6,8 @@ import { customElement, state } from 'lit/decorators.js';
 
 import './1-HelloWorld/HelloWorld.js';
 import './2-DataBinding/DataBinding.js';
+import './3-Events/Events.js';
+import './3-Events/Events2.js';
 
 @customElement('arcady-app')
 export class ArcadyApp extends LitElement {
@@ -35,12 +37,24 @@ export class ArcadyApp extends LitElement {
   getFeatures() {
     return [
       {
-        key: 'hello-world',
-        render: () => html`<hello-world></hello-world>`,
+        key: 'x-helloworld',
+        name: 'Hello World!',
+        render: () => html`<x-helloworld></x-helloworld>`,
       },
       {
-        key: 'data-binding',
-        render: () => html`<data-binding></data-binding>`,
+        key: 'x-databinding',
+        name: 'Data Binding',
+        render: () => html`<x-databinding></x-databinding>`,
+      },
+      {
+        key: 'x-events',
+        name: 'Events',
+        render: () => html`<x-events></x-events>`,
+      },
+      {
+        key: 'x-events2',
+        name: 'Events 2',
+        render: () => html`<x-events2></x-events2>`,
       },
     ];
   }
@@ -62,7 +76,7 @@ export class ArcadyApp extends LitElement {
         ${features.map(
           f => html`
             <button @click=${() => this.switchToFeature(f.key)}>
-              ${f.key}
+              ${f.name}
             </button>
           `
         )}
