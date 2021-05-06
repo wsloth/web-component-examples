@@ -10,5 +10,5 @@ To get started:
 npm init @open-wc
 # requires node 10 & npm 6 or higher
 
-npm run storybook
+npm start
 ```

@@ -1,29 +1,5 @@
 {
-  "name": "part-3",
-  "version": "0.0.0",
-  "description": "Webcomponent part-3 following open-wc recommendations",
-  "author": "part-3",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "scripts": {
-    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
-    "build": "tsc",
-    "prepublish": "tsc",
-    "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
-    "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
-    "storybook": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds -c .storybook/server.mjs\"",
-    "storybook:build": "tsc && build-storybook"
-  },
-  "dependencies": {
-    "lit-html": "^1.4.0",
-    "lit-element": "^2.5.0"
-  },
   "devDependencies": {
-    "@web/dev-server": "^0.1.17",
-    "concurrently": "^5.3.0",
-    "typescript": "^4.2.4",
-    "tslib": "^2.2.0",
     "eslint": "^7.25.0",
     "@open-wc/eslint-config": "^4.3.0",
     "@typescript-eslint/parser": "^4.22.1",
@@ -32,7 +8,29 @@
     "eslint-config-prettier": "^7.2.0",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4",
-    "@web/dev-server-storybook": "^0.3.5"
+    "@open-wc/building-rollup": "^1.10.0",
+    "deepmerge": "^4.2.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.47.0",
+    "@web/dev-server": "^0.1.17",
+    "concurrently": "^5.3.0",
+    "typescript": "^4.2.4",
+    "tslib": "^2.2.0"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+    "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
+    "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\""
+  },
+  "name": "part-3",
+  "version": "0.0.0",
+  "description": "Webcomponent part-3 following open-wc recommendations",
+  "author": "part-3",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^2.0.0-rc.1"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -49,7 +47,13 @@
         "error"
       ],
       "import/no-unresolved": "off",
-      "import/extensions": "off"
+      "import/extensions": [
+        "error",
+        "always",
+        {
+          "ignorePackages": true
+        }
+      ]
     }
   },
   "prettier": {
