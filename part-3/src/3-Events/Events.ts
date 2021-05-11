@@ -1,3 +1,7 @@
+/**
+ * Shows how events can be used to listen to keyup events,
+ * after which data can be extracted & passed around.
+ */
 /* eslint-disable no-console */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */

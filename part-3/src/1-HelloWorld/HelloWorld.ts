@@ -1,3 +1,6 @@
+/**
+ * Just a hello world component built with Lit.
+ */
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 

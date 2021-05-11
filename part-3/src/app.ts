@@ -8,6 +8,7 @@ import './1-HelloWorld/HelloWorld.js';
 import './2-DataBinding/DataBinding.js';
 import './3-Events/Events.js';
 import './3-Events/Events2.js';
+import './4-Forms/Forms.js';
 
 @customElement('arcady-app')
 export class ArcadyApp extends LitElement {
@@ -55,6 +56,11 @@ export class ArcadyApp extends LitElement {
         key: 'x-events2',
         name: 'Events 2',
         render: () => html`<x-events2></x-events2>`,
+      },
+      {
+        key: 'x-forms',
+        name: 'Forms',
+        render: () => html`<x-forms></x-forms>`,
       },
     ];
   }

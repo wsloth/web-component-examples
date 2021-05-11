@@ -1,3 +1,8 @@
+/**
+ * An extension on Events.ts, where this one also uses a
+ * CustomEvent from the child component to call functionality
+ * on the parent component.
+ */
 /* eslint-disable no-console */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
