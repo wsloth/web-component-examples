@@ -67,6 +67,14 @@ export class ArcadyApp extends RouterMixin(LitElement) {
     nav {
       margin-bottom: 50px;
     }
+
+    nav > button {
+      margin-top: 25px;
+      padding: 15px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 20px;
+      border-radius: 5px;
+    }
   `;
 
   render() {

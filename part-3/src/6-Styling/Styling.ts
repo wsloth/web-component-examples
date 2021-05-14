@@ -6,19 +6,21 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { fontHeadingMixin } from './fonts.js';
-import { primary } from './colors.js';
+import { spacing24 } from './spacing.js';
 
 @customElement('x-styling')
 export class FormsComponent extends LitElement {
   static styles = css`
-    span {
+    h1 {
       ${fontHeadingMixin()};
-      color: ${primary};
-      margin: 3em;
+      margin: ${spacing24};
     }
   `;
 
   render() {
-    return html` <span>Hello</span> `;
+    return html`
+      <h1>This is a <i>very</i> nice header!</h1>
+      <p>And this is a complementary paragraph explaining more.</p>
+    `;
   }
 }

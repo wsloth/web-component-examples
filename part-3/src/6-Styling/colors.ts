@@ -1,3 +1,4 @@
 import { css } from 'lit';
 
-export const primary = css`green`;
+export const primary = css`cornflowerblue`;
+export const secondary = css`tomato`;
