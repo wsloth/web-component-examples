@@ -1,6 +1,8 @@
 /* eslint-disable class-methods-use-this */
 /**
- * Example of a form with some
+ * Example of a form where the submit event is caught,
+ * the data is automatically parsed to an Object and then
+ * sent to an API endpoint.
  */
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
