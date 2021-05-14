@@ -3,7 +3,6 @@
  * after which data can be extracted & passed around.
  */
 /* eslint-disable no-console */
-/* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';

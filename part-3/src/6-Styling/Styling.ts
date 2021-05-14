@@ -6,7 +6,7 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-@customElement('x-forms')
+@customElement('x-styling')
 export class FormsComponent extends LitElement {
   static styles = css`
     label {

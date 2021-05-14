@@ -1,7 +1,3 @@
-/* eslint-disable no-alert */
-/* eslint-disable wc/guard-super-call */
-/* eslint-disable max-classes-per-file */
-/* eslint-disable class-methods-use-this */
 /**
  * Example of how different lifecycle hooks can be used.
  */
