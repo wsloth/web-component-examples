@@ -6,7 +6,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-@customElement('x-events2')
+@customElement('arcady-events2')
 export class EventsParent extends LitElement {
   @state() inputvalue = '';
 

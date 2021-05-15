@@ -5,7 +5,7 @@ import { LitElement, html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { until } from 'lit/directives/until.js';
 
-@customElement('x-lifecycle')
+@customElement('arcady-lifecycle')
 export class LifecycleComponent extends LitElement {
   @state() visible: boolean = false;
 
@@ -16,12 +16,14 @@ export class LifecycleComponent extends LitElement {
   render() {
     return html`
       <button @click=${this.toggleVisibility}>Toggle child component</button>
-      ${this.visible ? html`<x-lifecycle-child></x-lifecycle-child>` : ''}
+      ${this.visible
+        ? html`<arcady-lifecycle-child></arcady-lifecycle-child>`
+        : ''}
     `;
   }
 }
 
-@customElement('x-lifecycle-child')
+@customElement('arcady-lifecycle-child')
 export class LifecycleChildComponent extends LitElement {
   @state()
   contentPromise!: Promise<string>;

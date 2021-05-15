@@ -6,52 +6,52 @@ import { Route, RouterMixin } from './8-Routing/RouterMixin.js';
 export class ArcadyApp extends RouterMixin(LitElement) {
   protected routes: Route[] = [
     {
-      key: 'x-helloworld',
+      key: 'arcady-helloworld',
       name: 'Hello World!',
       import: () => import('./1-HelloWorld/HelloWorld.js'),
-      render: () => html`<x-helloworld></x-helloworld>`,
+      render: () => html`<arcady-helloworld></arcady-helloworld>`,
     },
     {
-      key: 'x-databinding',
+      key: 'arcady-databinding',
       name: 'Data Binding',
       import: () => import('./2-DataBinding/DataBinding.js'),
-      render: () => html`<x-databinding></x-databinding>`,
+      render: () => html`<arcady-databinding></arcady-databinding>`,
     },
     {
-      key: 'x-events',
+      key: 'arcady-events',
       name: 'Events',
       import: () => import('./3-Events/Events.js'),
-      render: () => html`<x-events></x-events>`,
+      render: () => html`<arcady-events></arcady-events>`,
     },
     {
-      key: 'x-events2',
+      key: 'arcady-events2',
       name: 'Events 2',
       import: () => import('./3-Events/Events2.js'),
-      render: () => html`<x-events2></x-events2>`,
+      render: () => html`<arcady-events2></arcady-events2>`,
     },
     {
-      key: 'x-forms',
+      key: 'arcady-forms',
       name: 'Forms',
       import: () => import('./4-Forms/Forms.js'),
-      render: () => html`<x-forms></x-forms>`,
+      render: () => html`<arcady-forms></arcady-forms>`,
     },
     {
-      key: 'x-lifecycle',
+      key: 'arcady-lifecycle',
       name: 'Lifecycle',
       import: () => import('./5-Lifecycle/Lifecycle.js'),
-      render: () => html`<x-lifecycle></x-lifecycle>`,
+      render: () => html`<arcady-lifecycle></arcady-lifecycle>`,
     },
     {
-      key: 'x-styling',
+      key: 'arcady-styling',
       name: 'Styling',
       import: () => import('./6-Styling/Styling.js'),
-      render: () => html`<x-styling></x-styling>`,
+      render: () => html`<arcady-styling></arcady-styling>`,
     },
     {
-      key: 'x-slots',
+      key: 'arcady-slots',
       name: 'Slots',
       import: () => import('./7-Slots/Slots.js'),
-      render: () => html`<x-slots></x-slots>`,
+      render: () => html`<arcady-slots></arcady-slots>`,
     },
   ];
 
@@ -62,7 +62,7 @@ export class ArcadyApp extends RouterMixin(LitElement) {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: flearcady-start;
       font-size: calc(10px + 0.7vmin);
       color: #1a2b42;
       max-width: 960px;

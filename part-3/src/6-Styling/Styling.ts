@@ -8,7 +8,7 @@ import { customElement } from 'lit/decorators.js';
 import { fontHeadingMixin } from './fonts.js';
 import { spacing24 } from './spacing.js';
 
-@customElement('x-styling')
+@customElement('arcady-styling')
 export class FormsComponent extends LitElement {
   static styles = css`
     h1 {

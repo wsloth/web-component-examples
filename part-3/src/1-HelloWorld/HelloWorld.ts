@@ -4,7 +4,7 @@
 import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('x-helloworld')
+@customElement('arcady-helloworld')
 export class HelloWorld extends LitElement {
   @property({ type: String }) message = 'Hello World!';
 

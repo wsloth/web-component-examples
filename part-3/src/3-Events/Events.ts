@@ -2,12 +2,10 @@
  * Shows how events can be used to listen to keyup events,
  * after which data can be extracted & passed around.
  */
-/* eslint-disable no-console */
-/* eslint-disable max-classes-per-file */
 import { LitElement, html } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
-@customElement('x-events')
+@customElement('arcady-events')
 export class EventsParent extends LitElement {
   @state() inputvalue = '';
 

@@ -2,11 +2,10 @@
  * Shows how to pass data from one component to another
  * one using data binding.
  */
-/* eslint-disable max-classes-per-file */
 import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-@customElement('x-databinding')
+@customElement('arcady-databinding')
 export class DataBindingParent extends LitElement {
   @property({ type: String }) message = 'Data binding test!';
 

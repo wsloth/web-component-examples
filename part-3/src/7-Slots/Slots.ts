@@ -4,17 +4,17 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-@customElement('x-slots')
+@customElement('arcady-slots')
 export class SlotsComponent extends LitElement {
   static styles = css`
-    x-card {
+    arcady-card {
       margin-bottom: 30px;
     }
   `;
 
   render() {
     return html`
-      <x-card>
+      <arcady-card>
         <h1 slot="title">Clickbaity title</h1>
         <p slot="content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
@@ -24,9 +24,9 @@ export class SlotsComponent extends LitElement {
           nunc. Morbi imperdiet at metus ullamcorper suscipit. Nulla congue
           sapien a nulla facilisis iaculis.
         </p>
-      </x-card>
+      </arcady-card>
 
-      <x-card>
+      <arcady-card>
         <h1 slot="title">World says "hello" back</h1>
         <p slot="content">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus
@@ -37,12 +37,12 @@ export class SlotsComponent extends LitElement {
           sapien a nulla facilisis iaculis.
         </p>
         <a href="...">Click here to learn more</a>
-      </x-card>
+      </arcady-card>
     `;
   }
 }
 
-@customElement('x-card')
+@customElement('arcady-card')
 export class CardComponent extends LitElement {
   static styles = css`
     :host {
