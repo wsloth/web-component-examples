@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { Route, RouterMixin } from './7-Routing/RouterMixin.js';
+import { Route, RouterMixin } from './8-Routing/RouterMixin.js';
 
 @customElement('arcady-app')
 export class ArcadyApp extends RouterMixin(LitElement) {
@@ -47,21 +47,27 @@ export class ArcadyApp extends RouterMixin(LitElement) {
       import: () => import('./6-Styling/Styling.js'),
       render: () => html`<x-styling></x-styling>`,
     },
+    {
+      key: 'x-slots',
+      name: 'Slots',
+      import: () => import('./7-Slots/Slots.js'),
+      render: () => html`<x-slots></x-slots>`,
+    },
   ];
 
   static styles = css`
     :host {
       min-height: 100vh;
+      padding: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
+      font-size: calc(10px + 0.7vmin);
       color: #1a2b42;
       max-width: 960px;
       margin: 0 auto;
-      text-align: center;
-      background-color: #eee;
+      background-color: #fff;
     }
 
     nav {
