@@ -23,6 +23,14 @@ export class EventsParent extends LitElement {
     }
   }
 
+  onSetText(event: CustomEvent) {
+    const el = this.shadowRoot?.querySelector('input');
+    if (el) {
+      el.value = event.detail;
+      this.inputvalue = event.detail;
+    }
+  }
+
   render() {
     return html`
       <label for="input">Enter a value:</label>
@@ -31,6 +39,7 @@ export class EventsParent extends LitElement {
       <events-child2
         .message=${this.inputvalue}
         @clear-text=${this.onClearText}
+        @set-text=${this.onSetText}
       ></events-child2>
     `;
   }
@@ -38,15 +47,23 @@ export class EventsParent extends LitElement {
 
 @customElement('events-child2')
 export class EventsChild extends LitElement {
-  @property({ type: String }) message: string = '';
+  @property({ type: String }) message = '';
 
   fireClearTextEvent() {
     const event = new CustomEvent('clear-text');
     this.dispatchEvent(event);
   }
 
+  fireSetTextEvent() {
+    const event = new CustomEvent('set-text', { detail: 'Arcady' });
+    this.dispatchEvent(event);
+  }
+
   render() {
-    return html` <p>Live typing value: "${this.message}"</p>
-      <button @click=${this.fireClearTextEvent}>Clear text in parent</button>`;
+    return html`
+      <p>Live typing value: "${this.message}"</p>
+      <button @click=${this.fireClearTextEvent}>Clear text in parent</button>
+      <button @click=${this.fireSetTextEvent}>Set text to "Arcady"</button>
+    `;
   }
 }

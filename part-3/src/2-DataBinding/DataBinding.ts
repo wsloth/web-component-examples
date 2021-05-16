@@ -25,7 +25,7 @@ export class DataBindingParent extends LitElement {
 
 @customElement('data-binding-child')
 export class DataBindingChild extends LitElement {
-  @property({ type: String }) message: string = '';
+  @property({ type: String }) message = '';
 
   static styles = css`
     :host {

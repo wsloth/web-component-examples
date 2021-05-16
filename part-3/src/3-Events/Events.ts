@@ -26,7 +26,7 @@ export class EventsParent extends LitElement {
 
 @customElement('events-child')
 export class EventsChild extends LitElement {
-  @property({ type: String }) message: string = '';
+  @property({ type: String }) message = '';
 
   render() {
     return html` <p>Live typing value: "${this.message}"</p> `;
