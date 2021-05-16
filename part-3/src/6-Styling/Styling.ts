@@ -13,7 +13,7 @@ export class FormsComponent extends LitElement {
   static styles = css`
     h1 {
       ${fontHeadingMixin()};
-      margin: ${spacing24};
+      margin: ${spacing24} 0;
     }
   `;
 
