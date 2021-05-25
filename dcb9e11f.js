@@ -1,4 +1,4 @@
-import{h as e,T as t,r as a,_ as s,n as r}from"./ad8b5b83.js";let o,n,l=e=>e,m=class extends e{onSubmit(e){e.preventDefault();const t=new FormData(e.target),a=Object.fromEntries(t.entries());fetch("https://api.mywebsite.com/newuser",{method:"POST",body:JSON.stringify(a)}).then(console.log)}render(){return t(o||(o=l`
+import{h as e,T as t,r as a,_ as s,n as r}from"./a26b63a4.js";let o,n,l=e=>e,m=class extends e{onSubmit(e){e.preventDefault();const t=new FormData(e.target),a=Object.fromEntries(t.entries());fetch("https://api.mywebsite.com/newuser",{method:"POST",body:JSON.stringify(a)}).then(console.log)}render(){return t(o||(o=l`
       <form name="signupForm" @submit=${0}>
         <label for="email">Email address:</label>
         <input name="email" type="email" />

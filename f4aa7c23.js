@@ -1,4 +1,4 @@
-import{h as e,T as t,_ as s,a as n,n as a,e as r}from"./ad8b5b83.js";let p,u,i=e=>e,l=class extends e{constructor(){super(...arguments),this.inputvalue=""}onKeyup(e){const t=e.target;this.inputvalue=t.value}render(){return t(p||(p=i`
+import{h as e,T as t,_ as s,a as n,n as a,e as r}from"./a26b63a4.js";let p,u,i=e=>e,l=class extends e{constructor(){super(...arguments),this.inputvalue=""}onKeyup(e){const t=e.target;this.inputvalue=t.value}render(){return t(p||(p=i`
       <label for="input">Enter a value:</label>
       <input name="input" type="text" @keyup=${0} />
 

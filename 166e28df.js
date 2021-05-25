@@ -1,4 +1,4 @@
-import{h as i,T as t,r as a,_ as e,n as s}from"./ad8b5b83.js";let o,l,r,n,c=i=>i,d=class extends i{render(){return t(o||(o=c`
+import{h as i,T as t,r as a,_ as e,n as s}from"./a26b63a4.js";let o,l,r,n,c=i=>i,d=class extends i{render(){return t(o||(o=c`
       <arcady-card>
         <h1 slot="title">Clickbaity title</h1>
         <p slot="content">
